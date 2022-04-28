@@ -108,6 +108,10 @@ Develop by WebP Server team. https://github.com/webp-sh`, version)
 	})
 	app.Use(logger.New())
 
+	//自动义功能
+	app.Get("/ping", ping)
+	app.Get("/i/:URL", img_download)
+
 	listenAddress := config.Host + ":" + config.Port
 	app.Get("/*", convert)
 

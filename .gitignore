@@ -21,3 +21,4 @@ builds/
 /.idea/webp_server_go.iml
 remote-raw/
 coverage.txt
+webp_server_go
