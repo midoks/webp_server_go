@@ -22,3 +22,4 @@ builds/
 remote-raw/
 coverage.txt
 webp_server_go
+*.jpg
