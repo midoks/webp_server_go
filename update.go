@@ -17,7 +17,7 @@ func autoUpdate() {
 		}
 	}()
 
-	var api = "https://api.github.com/repos/webp-sh/webp_server_go/releases/latest"
+	var api = "https://api.github.com/repos/midoks/webp_server_go/releases/latest"
 	type Result struct {
 		TagName string `json:"tag_name"`
 	}
