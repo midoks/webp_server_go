@@ -108,6 +108,8 @@ Develop by WebP Server team. https://github.com/webp-sh`, version)
 		DisableStartupMessage: true,
 	})
 	app.Use(logger.New())
+
+	//
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: "*",
 		AllowHeaders: "*",
