@@ -83,6 +83,6 @@ func img_download(c *fiber.Ctx) error {
 		return err
 	}
 
-	c.Redirect(uri)
+	c.Redirect(uri, 301)
 	return nil
 }
