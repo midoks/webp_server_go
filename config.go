@@ -22,8 +22,8 @@ var (
 	prefetch, proxyMode      bool
 	remoteRaw                = "remote-raw"
 	config                   Config
-	version                  = "0.4.4"
-	releaseUrl               = "https://github.com/webp-sh/webp_server_go/releases/latest/download/"
+	version                  = "0.4.4.2"
+	releaseUrl               = "https://github.com/midoks/webp_server_go/releases/latest/download/"
 )
 
 const (
@@ -34,7 +34,7 @@ const (
   "QUALITY": "80",
   "IMG_PATH": "./pics",
   "EXHAUST_PATH": "./exhaust",
-  "ALLOWED_TYPES": ["jpg","png","jpeg","bmp"],
+  "ALLOWED_TYPES": ["jpg","png","jpeg","bmp","svg"],
   "ENABLE_AVIF": false
 }`
 
