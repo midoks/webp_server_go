@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"path"
 	"path/filepath"
 	"unsafe"
 
@@ -72,10 +73,11 @@ func img_download(c *fiber.Ctx) error {
 	}
 
 	reqURI = BytesToString(decoded)
+	fileSuffix := path.Ext(reqURI)
 	a := Md5(reqURI)
 
 	uri_path := "/" + a[0:1] + "/" + a[1:10] + "/" + a[11:20] + "/" + a[21:32]
-	uri := uri_path + "/" + a + ".jpg"
+	uri := uri_path + "/" + a + fileSuffix
 	file_path := config.ImgPath + uri
 
 	err = Download(reqURI, file_path)
