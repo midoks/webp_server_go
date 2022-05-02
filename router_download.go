@@ -9,6 +9,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 	"unsafe"
 
 	"github.com/gofiber/fiber/v2"
@@ -74,6 +75,11 @@ func img_download(c *fiber.Ctx) error {
 
 	reqURI = BytesToString(decoded)
 	fileSuffix := path.Ext(reqURI)
+
+	if !strings.EqualFold(fileSuffix, ".svg") {
+		fileSuffix = ".jpg"
+	}
+
 	a := Md5(reqURI)
 
 	uri_path := "/" + a[0:1] + "/" + a[1:10] + "/" + a[11:20] + "/" + a[21:32]
