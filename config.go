@@ -22,7 +22,7 @@ var (
 	prefetch, proxyMode      bool
 	remoteRaw                = "remote-raw"
 	config                   Config
-	version                  = "0.4.4.2"
+	version                  = "0.4.4.3"
 	releaseUrl               = "https://github.com/midoks/webp_server_go/releases/latest/download/"
 )
 
