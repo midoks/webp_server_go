@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 	"os"
 	"path"
 	"path/filepath"
@@ -66,8 +67,13 @@ func ping(c *fiber.Ctx) error {
 }
 
 func img_download(c *fiber.Ctx) error {
-	var err error
+
 	reqURI := c.Params("URL")
+	t, err := url.QueryUnescape(reqURI)
+	if err == nil {
+		reqURI = t
+	}
+
 	decoded, err := base64.StdEncoding.DecodeString(reqURI)
 	if err != nil {
 		return err
